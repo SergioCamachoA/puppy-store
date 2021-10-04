@@ -1,0 +1,26 @@
+@use "base";
+
+.adopted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    margin: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    color: base.$color-one;
+    width: 70%;
+    background-color: base.$color-two;
+    // background-color: greenyellow;
+  }
+  @include base.tablet {
+    h2 {
+      max-width: 350px;
+    }
+  }
+  @include base.laptop {
+  }
+  @include base.desktop {
+  }
+}

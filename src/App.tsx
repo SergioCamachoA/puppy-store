@@ -1,14 +1,26 @@
-import React from "react";
+import "./App.scss"
+import { Route, Switch } from "react-router"
+import { Adopted } from "./pages/Adopted"
+import { Checkout } from "./pages/Checkout"
+import { Dogs } from "./pages/Dogs"
+import { NavBar } from "./components/NavBar"
+// import { useFetch } from "./hooks/useFetch"
+// import { FC } from "react"
 
-import "./App.css";
+export const App = () => {
+  // const [data] = useFetch()
 
-function App() {
-  
   return (
     <div className="App">
-      <h1>Adopt a puppie App</h1>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Dogs} />
+        <Route exact path="/adopted" component={Adopted} />
+        <Route exact path="/checkout" component={Checkout} />
+        <Route path="*" component={Dogs} />
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

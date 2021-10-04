@@ -1,0 +1,48 @@
+@use "./styles/adopted";
+@use "./styles/not-adopted";
+@use "./styles/dogs-list";
+@use "./styles/dog-container";
+@use "./styles/checkout-item";
+@use "./styles/checkout-container";
+@use "./styles/navbar";
+
+@use "./styles/base";
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: base.$color-two;
+  transition: 300ms;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: base.$color-three;
+  }
+}
+p {
+  font-weight: bold;
+}
+
+button {
+  background-color: base.$color-two;
+  color: base.$background;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  transition: 300ms;
+  &:hover {
+    background-color: base.$color-three;
+    color: base.$color-one;
+  }
+}
+
+body {
+  background-color: base.$background;
+  // min-height: 100vh;
+  color: base.$color-four;
+}

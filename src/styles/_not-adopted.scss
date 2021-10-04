@@ -1,0 +1,17 @@
+@use "base";
+
+.not-adopted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //   @include base.tablet {
+  //     h2 {
+  //       max-width: 350px;
+  //     }
+  //   }
+  //   @include base.laptop {
+  //   }
+  //   @include base.desktop {
+  //   }
+}

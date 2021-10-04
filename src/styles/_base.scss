@@ -1,0 +1,23 @@
+$background: #ffffff;
+$color-one: #f3f0fa;
+$color-two: #7a5cb8;
+$color-three: #6546a9;
+$color-four: #1a1a1a;
+
+@mixin tablet {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+@use "base";
+
+.dogs-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: greenyellow;
+  @include base.tablet {
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+  @include base.laptop {
+  }
+  @include base.desktop {
+    max-width: 1303px;
+    // background-color: black;
+  }
+}

@@ -1,0 +1,71 @@
+@use "base";
+
+.navbar {
+  width: 100vw;
+  height: 2.5rem;
+  background-color: base.$color-one;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 11px;
+  position: sticky;
+  top: 0%;
+  .center-nav {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // background-color: chartreuse;
+  }
+  .checkout-nav {
+    // background-color: chartreuse;
+    width: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    p {
+      margin-left: 0.2rem;
+      width: 1rem;
+      height: 1rem;
+      text-align: center;
+      // position: absolute;
+      // left: 0%;
+      // top: 60%;
+      background-color: tomato;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: bolder;
+      color: base.$background;
+    }
+  }
+
+  @include base.tablet {
+    // height: 10vh;
+    .center-nav {
+      width: 40%;
+    }
+    .checkout-nav {
+      width: 22%;
+    }
+  }
+  @include base.laptop {
+    .center-nav {
+      width: 25%;
+    }
+    .checkout-nav {
+      width: fit-content;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+  @include base.desktop {
+    height: 3rem;
+    // font-size: 1rem;
+    // .center-nav {
+    //   width: 24%;
+    // }
+  }
+}
