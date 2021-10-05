@@ -3,11 +3,8 @@
 .checkout-container {
   display: flex;
   width: 100vw;
-  min-height: 100vh;
   flex-direction: column;
-  //   justify-content: center;
   align-items: center;
-  // background-color: greenyellow;
   .btn-submit {
     display: flex;
     width: 80%;
@@ -19,7 +16,22 @@
     }
     margin-bottom: 50vh;
   }
+
+  .holder {
+    height: 50vh;
+    max-width: 70vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: base.$color-two;
+    font-size: 20px;
+  }
+
   @include base.tablet {
+    .holder {
+      font-size: 24px;
+    }
   }
   @include base.laptop {
     .btn-submit {
@@ -30,7 +42,5 @@
         padding: 0 1rem;
       }
     }
-  }
-  @include base.desktop {
   }
 }

@@ -1,6 +1,4 @@
-import React from "react"
 import { Link } from "react-router-dom"
-// import "../styles/_navbar.scss"
 import { CheckoutIcon } from "./CheckoutIcon"
 
 export const NavBar = () => {

@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import { useGlobal } from "../hooks/useGlobal"
 import { Dog } from "../interfaces/interfaces"
 
@@ -11,7 +11,7 @@ export const CheckoutItem: FC<Props> = ({ dog }) => {
 
   return (
     <div className="checkout-item">
-      <img src={dog.url} alt={dog.title} />
+      <img src={dog.url} alt={dog.title} decoding="async" />
       <div className="info">
         <p>{dog.title}</p>
         <div className="btn">

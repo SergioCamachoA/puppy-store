@@ -1,4 +1,3 @@
-import React from "react"
 import { useGlobal } from "../hooks/useGlobal"
 import { CheckoutItem } from "./CheckoutItem"
 
@@ -17,9 +16,9 @@ export const CheckoutContainer = () => {
           </div>
         </>
       ) : (
-        <p>
-          Your <span>can</span>didates will show here
-        </p>
+        <div className="holder">
+          <p>Your candidates will show here</p>
+        </div>
       )}
     </div>
   )

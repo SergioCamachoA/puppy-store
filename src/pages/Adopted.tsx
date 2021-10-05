@@ -7,7 +7,13 @@ export const Adopted = () => {
   return (
     <div className="adopted">
       <h2>Your companions</h2>
-      <DogsList dogsList={adoptedList} />
+      {adoptedList ? (
+        <DogsList dogsList={adoptedList} />
+      ) : (
+        <div className="holder">
+          <p>no pups adopted yet...</p>
+        </div>
+      )}
     </div>
   )
 }

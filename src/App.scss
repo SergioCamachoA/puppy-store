@@ -1,11 +1,10 @@
 @use "./styles/adopted";
-@use "./styles/not-adopted";
+@use "./styles/dogs";
 @use "./styles/dogs-list";
-@use "./styles/dog-container";
+@use "./styles/dog-item";
 @use "./styles/checkout-item";
 @use "./styles/checkout-container";
 @use "./styles/navbar";
-
 @use "./styles/base";
 
 * {
@@ -43,6 +42,5 @@ button {
 
 body {
   background-color: base.$background;
-  // min-height: 100vh;
   color: base.$color-four;
 }

@@ -1,20 +1,11 @@
 @use "base";
 
-.adopted {
+.not-adopted {
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2 {
-    text-align: center;
-    margin: 1rem;
-    padding: 0.5rem 0;
-    border-radius: 1rem;
-    color: base.$color-one;
-    width: 70%;
-    background-color: base.$color-two;
-  }
 
-  .holder {
+  .loader {
     height: 50vh;
     max-width: 70vw;
     text-align: center;
@@ -23,13 +14,20 @@
     align-items: center;
     color: base.$color-two;
     font-size: 20px;
+    animation: loader 800ms alternate infinite;
+
+    @keyframes loader {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100%;
+      }
+    }
   }
 
   @include base.tablet {
-    h2 {
-      max-width: 350px;
-    }
-    .holder {
+    .loader {
       font-size: 24px;
     }
   }

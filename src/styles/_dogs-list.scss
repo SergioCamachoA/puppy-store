@@ -5,15 +5,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: greenyellow;
+
+  .pages {
+    // background-color: tomato;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    button {
+      font-size: 22px;
+      margin: 0.5rem;
+      color: base.$color-three;
+      background-color: base.$color-one;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+    }
+  }
+
   @include base.tablet {
     flex-direction: unset;
     flex-wrap: wrap;
   }
-  @include base.laptop {
-  }
   @include base.desktop {
     max-width: 1303px;
-    // background-color: black;
   }
 }

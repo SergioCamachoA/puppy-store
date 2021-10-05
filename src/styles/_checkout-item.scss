@@ -21,8 +21,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: center;
-    // background-color: chartreuse;
     p {
       font-weight: bolder;
       margin-left: 1rem;
@@ -35,19 +33,11 @@
       button {
         background-color: tomato;
         border-radius: 1rem;
-        // padding: 0.3rem;
       }
     }
   }
 
-  @include base.tablet {
-    // div {
-    //   width: 100%;
-    // }
-  }
   @include base.laptop {
     max-width: 614.39px;
-  }
-  @include base.desktop {
   }
 }

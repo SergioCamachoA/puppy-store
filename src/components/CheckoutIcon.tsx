@@ -1,4 +1,3 @@
-import React from "react"
 import { useGlobal } from "../hooks/useGlobal"
 
 export const CheckoutIcon = () => {

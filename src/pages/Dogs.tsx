@@ -3,9 +3,16 @@ import { useGlobal } from "../hooks/useGlobal"
 
 export const Dogs = () => {
   const { notAdoptedList } = useGlobal()
+
   return (
     <div className="not-adopted">
-      <DogsList dogsList={notAdoptedList} />
+      {notAdoptedList ? (
+        <DogsList dogsList={notAdoptedList} />
+      ) : (
+        <div className="loader">
+          <p>loading some pups...</p>
+        </div>
+      )}
     </div>
   )
 }

@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals"
 import axios from "axios"
 
 import { BrowserRouter as Router } from "react-router-dom"
-import { GlobalContextProvider } from "./hooks/useGlobal"
+import { GlobalContextProvider } from "./context/Context"
 
 axios.defaults.baseURL = "http://localhost:8080/dogs"
 
