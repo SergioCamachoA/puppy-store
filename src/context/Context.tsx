@@ -22,14 +22,14 @@ function reducer(state: InitialState, action: Action) {
     case ACTIONS.INITIAL_STATE:
       return {
         ...state,
-        adoptedList: adoptedList && adoptedList,
-        cart: cart && cart,
+        adoptedList: adoptedList!,
+        cart: cart!,
       }
 
     case ACTIONS.NOT_ADOPTED_LIST:
       return {
         ...state,
-        notAdoptedList: notAdoptedList && notAdoptedList,
+        notAdoptedList: notAdoptedList!,
       }
 
     case ACTIONS.ADD_TO_CART:
@@ -41,17 +41,15 @@ function reducer(state: InitialState, action: Action) {
     case ACTIONS.REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart && state.cart.filter((each) => each.id !== id),
+        cart: state.cart!.filter((each) => each.id !== id),
       }
 
     case ACTIONS.ADOPT:
       return {
         ...state,
-        adoptedList:
-          state.cart &&
-          (state.adoptedList
-            ? [...state.adoptedList, ...state.cart]
-            : [...state.cart]),
+        adoptedList: state.adoptedList
+          ? [...state.adoptedList, ...state.cart!]
+          : [...state.cart!],
 
         cart: null,
       }
