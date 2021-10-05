@@ -1,3 +1,3 @@
 # Casai Frontend exercise
 
-Submission draft.
+Final version for submission.
