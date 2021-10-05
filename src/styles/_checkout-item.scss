@@ -2,9 +2,10 @@
 .checkout-item {
   margin: 1rem;
   width: 80%;
+  // min-height: 20vh;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center;
   background-color: base.$color-one;
   padding: 1rem;
   border-radius: 1rem;
@@ -16,20 +17,22 @@
     border-radius: 1rem;
   }
   div {
-    height: 100px;
+    // min-height: 80px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     p {
       font-weight: bolder;
       margin-left: 1rem;
+      margin-bottom: 2rem;
     }
     .btn {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      height: 25%;
+      height: 2rem;
       button {
         background-color: tomato;
         border-radius: 1rem;
