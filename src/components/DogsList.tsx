@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react"
 import { DogItem } from "./DogItem"
 import { Dog } from "../interfaces/interfaces"
+import { Pagination } from "./Pagination"
 
 interface Props {
   dogsList: Dog[] | null
@@ -35,27 +36,12 @@ export const DogsList: FC<Props> = ({ dogsList }) => {
           return <DogItem key={each.id} dog={each} />
         })}
 
-      {shownList?.length !== dogsList?.length && (
-        <div className="pages">
-          <p>show</p>
-          <button onClick={() => handlePages(10)} className="show-10">
-            {shownAmount + 10 < dogsList!.length
-              ? 10
-              : dogsList!.length - shownAmount}
-          </button>
-          {shownAmount + 20 < dogsList!.length && (
-            <button onClick={() => handlePages(20)} className="show-20">
-              20
-            </button>
-          )}
-          {shownAmount + 50 < dogsList!.length && (
-            <button onClick={() => handlePages(50)} className="show-50">
-              50
-            </button>
-          )}
-          <p>more</p>
-        </div>
-      )}
+      <Pagination
+        dogsList={dogsList}
+        shownList={shownList}
+        handlePages={handlePages}
+        shownAmount={shownAmount}
+      />
     </div>
   )
 }
