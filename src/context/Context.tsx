@@ -1,5 +1,11 @@
 import { Dog, InitialState, Action } from "../interfaces/interfaces"
-import { ReactNode, createContext, useReducer, useEffect } from "react"
+import {
+  ReactNode,
+  createContext,
+  useReducer,
+  useEffect,
+  useCallback,
+} from "react"
 
 const initialState: InitialState = {
   adoptedList: null,
@@ -35,7 +41,7 @@ function reducer(state: InitialState, action: Action) {
     case ACTIONS.ADD_TO_CART:
       return {
         ...state,
-        cart: dog ? (state.cart ? [...state.cart, dog] : [dog]) : null,
+        cart: dog && (state.cart ? [...state.cart, dog] : [dog]),
       }
 
     case ACTIONS.REMOVE_FROM_CART:
@@ -108,7 +114,7 @@ export const GlobalContextProvider = ({
     )
   }, [state])
 
-  function setNotAdoptedList(notAdoptedList: Dog[]) {
+  const setNotAdoptedList = useCallback((notAdoptedList: Dog[]) => {
     dispatch({
       type: ACTIONS.NOT_ADOPTED_LIST,
       payload: {
@@ -119,7 +125,7 @@ export const GlobalContextProvider = ({
         id: null,
       },
     })
-  }
+  }, [])
 
   function addToCart(dog: Dog) {
     dispatch({

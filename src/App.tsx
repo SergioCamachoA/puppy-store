@@ -43,8 +43,7 @@ export const App = () => {
       }
       return dogs
     }
-    // eslint-disable-next-line
-  }, [fetchedList, adoptedList])
+  }, [fetchedList, adoptedList, setNotAdoptedList])
 
   return (
     <div className="App">
